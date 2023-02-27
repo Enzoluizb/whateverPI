@@ -21,6 +21,9 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         gap: 10,
     },
-   
+    imgLogo: {
+        minWidth: "200px",
+        minHeight: "200px",
+    }
     
 })
