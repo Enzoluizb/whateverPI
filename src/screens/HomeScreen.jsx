@@ -3,9 +3,8 @@ import { styles } from "../components/styles";
 
 export const HomeScreen = ({ navigation }) => {
   return (
-    <View style={styles.formulario}>
+    <View style={styles.container}>
       <Text>Home page</Text>
     </View>
- 
   );
 };

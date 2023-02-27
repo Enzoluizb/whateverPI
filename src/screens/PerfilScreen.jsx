@@ -4,14 +4,14 @@ import { styles } from "../components/styles";
 
 export const PerfilScreen = ({ navigation }) => {
     return (
-        <View style={styles.formulario}>
+        <View style={styles.container}>
             <Image
                 source={{ uri: "https://picsum.photos/200/200" }}
                 style={styles.imgLogo}
             ></Image>
             <TextInput label="Alterar e-mail"></TextInput>
             <TextInput label="Alterar senha"></TextInput>
-            <Button title="Alterar"></Button>
+            <Button title="Salvar"></Button>
         </View>
     )
 }
