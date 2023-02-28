@@ -57,7 +57,7 @@ export const RegisterScreen = ({ navigation }) => {
       createUserWithEmailAndPassword(auth, email.value, password.value)
         .then((value) => {
           console.log("Cadastrado com sucesso! " + value.user.uid);
-          navigation.navigate("HomeScreen", {
+          navigation.navigate("LoginScreen", {
             mensagem: "Você se registrou com muito sucesso!",
           });
         })
@@ -82,7 +82,7 @@ export const RegisterScreen = ({ navigation }) => {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Cadastro</Text>
       <HelperText type="error">{mostraErro}</HelperText>
       <TextInput

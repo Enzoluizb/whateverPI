@@ -52,7 +52,7 @@ export const LoginScreen = ({ route, navigation }) => {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
        <Image
          source={{ uri: "https://picsum.photos/200/200" }}
          style={styles.imgLogo}
