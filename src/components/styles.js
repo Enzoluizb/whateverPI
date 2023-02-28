@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
         gap: 100,
+        backgroundColor: "#2D4B73"
     },
     imgLogo: {
         minWidth: "200px",
