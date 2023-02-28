@@ -5,6 +5,9 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { PerfilScreen } from "../screens/PerfilScreen";
 import HistoricoScreen from "../screens/HistoricoScreen";
 import EventosDoDiaScreen from "../screens/EventosDoDiaScreen";
+import { LoginScreen } from "../screens/LoginScreen";
+import { RegisterScreen } from "../screens/RegisterScreen";
+import { ForgotPasswordScreen } from "../screens/ForgotPasswordScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +15,30 @@ export const RootNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen
+          name="LoginScreen"
+          component={LoginScreen}
+          options={{
+            headerShown: false,
+            title: "Tela de Login",
+          }}
+        />
+        <Stack.Screen
+          name="RegisterScreen"
+          component={RegisterScreen}
+          options={{
+            headerShown: false,
+            title: "Tela de Login",
+          }}
+        />
+        <Stack.Screen
+          name="ForgotPasswordScreen"
+          component={ForgotPasswordScreen}
+          options={{
+            headerShown: false,
+            title: "Tela de Login",
+          }}
+        />
         <Stack.Screen name={"Drawer"} component={MyDrawer} />
         <Stack.Screen name={"Home"} component={HomeScreen} />
         <Stack.Screen name={"Perfil"} component={PerfilScreen} />

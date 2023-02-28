@@ -5,7 +5,6 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "flex-start",
         alignItems: "center",
-        backgroundColor: "#2D4B73",
         gap: 100,
     },
     imgLogo: {

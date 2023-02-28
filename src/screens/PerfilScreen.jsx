@@ -1,5 +1,6 @@
 import { Button, Image, View } from "react-native"
 import { TextInput } from "react-native-paper";
+import { Text } from "react-native-web";
 import { styles } from "../components/styles";
 
 export const PerfilScreen = ({ navigation }) => {
@@ -9,8 +10,14 @@ export const PerfilScreen = ({ navigation }) => {
                 source={{ uri: "https://picsum.photos/200/200" }}
                 style={styles.imgLogo}
             ></Image>
-            <TextInput label="Alterar e-mail"></TextInput>
-            <TextInput label="Alterar senha"></TextInput>
+            <View>
+                <Text>Alterar e-mail</Text>
+                <TextInput label="Alterar e-mail"></TextInput>
+            </View>
+            <View>
+                <Text>Alterar senha</Text>
+                <TextInput label="Alterar senha"></TextInput>
+            </View>
             <Button title="Salvar"></Button>
         </View>
     )
