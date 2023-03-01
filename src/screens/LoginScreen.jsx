@@ -1,10 +1,10 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { TouchableOpacity, Text, View } from "react-native";
-import { Button, HelperText, TextInput } from "react-native-paper";
+import { TouchableOpacity, Text, View, TextInput } from "react-native";
+import { Button, HelperText,  } from "react-native-paper";
 import { Image } from "react-native-web";
 import { auth } from "../components/firebase";
-import { styles } from "../components/styles.js";
+import { styles } from "../components/styles";
 
 export const LoginScreen = ({ route, navigation }) => {
   const [email, setEmail] = useState({
@@ -52,37 +52,35 @@ export const LoginScreen = ({ route, navigation }) => {
   }
 
   return (
-    <View style={styles.container}>
-       <Image
-         source={{ uri: "https://picsum.photos/200/200" }}
-         style={styles.imgLogo}
-        resizeMode="contain"
-      />
+    <View style={styles.containerLogin}>
+      <Text style={styles.Logo}>whatever</Text>
       {mensagem && <HelperText type="info">{mensagem}</HelperText>}
       <HelperText type="error">{mostraErro}</HelperText>
-      <TextInput
-        label="Digite seu E-mail"
+      <TextInput   
+        label="e-mail"
         value={email.value}
         onChangeText={(text) => setEmail({ value: text, error: "" })}
         error={!!email.error}
         errorText={email.error}
-        
         /* não essenciais  */
         returnKeyType="next"
         autoCompleteType="email"
         textContentType="emailAddress"
         keyboardType="email-address"
+        style={styles.inputLogin}
+        placeholder="e-mail"
       />
       <HelperText visible={!!email.error}>{email.error}</HelperText>
-      <TextInput
-        label="Senha"
+      <TextInput 
+        label="senha"
         returnKeyType="done"
         value={password.value}
         onChangeText={(text) => setPassword({ value: text, error: "" })}
         error={!!password.error}
         errorText={password.error}
         secureTextEntry
-       
+        style={styles.inputLogin}
+        placeholder="senha"
       />
       <View>
         <TouchableOpacity

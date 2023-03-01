@@ -42,16 +42,13 @@ export const ForgotPasswordScreen = ({ route, navigation }) => {
   }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.box}>
-        <Text style={styles.texto}>Recuperar senha</Text>
-        <Text style={styles.dig}>Digite seu e-mail</Text>
-
+    <View>
+      <View>
+        <Text>Recuperar senha</Text>
+        <Text>Digite seu e-mail</Text>
         {mensagem && <HelperText type="info">{mensagem}</HelperText>}
         <HelperText type="error">{mostraErro}</HelperText>
-
         <TextInput
-          style={styles.input}
           label="Digite seu E-mail"
           value={email.value}
           onChangeText={(text) => setEmail({ value: text, error: "" })}
@@ -63,23 +60,21 @@ export const ForgotPasswordScreen = ({ route, navigation }) => {
           textContentType="emailAddress"
           keyboardType="email-address"
         />
-
         <HelperText visible={!!email.error}>{email.error}</HelperText>
-
-        <View style={styles.esqueceuSenha}>
+        <View>
           <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-            <Text style={styles.label}>Fazer login?</Text>
+            <Text>Fazer login?</Text>
           </TouchableOpacity>
         </View>
-        <Button mode="contained" onPress={onForgotPressed} style={styles.botao}>
+        <Button mode="contained" onPress={onForgotPressed}>
           Login
         </Button>
-        <View style={styles.row}>
-          <Text style={styles.label}>Não possui uma conta? </Text>
+        <View>
+          <Text>Não possui uma conta? </Text>
           <TouchableOpacity
             onPress={() => navigation.navigate("RegisterScreen")}
           >
-            <Text style={styles.link}>Cadastrar</Text>
+            <Text>Cadastrar</Text>
           </TouchableOpacity>
         </View>
       </View>
