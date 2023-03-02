@@ -1,12 +1,36 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { TouchableOpacity, Text, View, TextInput } from "react-native";
-import { Button, HelperText,  } from "react-native-paper";
-import { Image } from "react-native-web";
+import { Button, HelperText } from "react-native-paper";
 import { auth } from "../components/firebase";
 import { styles } from "../components/styles";
+// Importe o módulo de autenticação do Firebase
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import "../components/styles.css";
+
 
 export const LoginScreen = ({ route, navigation }) => {
+  // Crie uma instância do provedor de autenticação do Google
+  const provider = new GoogleAuthProvider();
+
+  // Crie uma função para realizar o login com o Google
+  function signInWithGoogle() {
+    const auth = getAuth();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // O usuário fez login com o Google com sucesso
+        const user = result.user;
+        console.log(user);
+        navigation.navigate("Drawer");
+      })
+      .catch((error) => {
+        // Ocorreu um erro ao fazer login com o Google
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  }
+
   const [email, setEmail] = useState({
     value: "",
     error: "",
@@ -56,7 +80,8 @@ export const LoginScreen = ({ route, navigation }) => {
       <Text style={styles.Logo}>whatever</Text>
       {mensagem && <HelperText type="info">{mensagem}</HelperText>}
       <HelperText type="error">{mostraErro}</HelperText>
-      <TextInput   
+      <button className="google-button" onClick={() => signInWithGoogle()}>Entrar com o Google</button>
+      <TextInput
         label="e-mail"
         value={email.value}
         onChangeText={(text) => setEmail({ value: text, error: "" })}
@@ -71,7 +96,7 @@ export const LoginScreen = ({ route, navigation }) => {
         placeholder="e-mail"
       />
       <HelperText visible={!!email.error}>{email.error}</HelperText>
-      <TextInput 
+      <TextInput
         label="senha"
         returnKeyType="done"
         value={password.value}

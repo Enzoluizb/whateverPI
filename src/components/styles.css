@@ -1,0 +1,13 @@
+.google-button {
+    background-color: #4285F4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .google-button:hover {
+    background-color: #357ae8;
+  }
