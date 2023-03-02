@@ -8,7 +8,6 @@ import { styles } from "../components/styles";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import "../components/styles.css";
 
-
 export const LoginScreen = ({ route, navigation }) => {
   // Crie uma instância do provedor de autenticação do Google
   const provider = new GoogleAuthProvider();
@@ -114,7 +113,9 @@ export const LoginScreen = ({ route, navigation }) => {
           <Text>Esqueceu sua senha?</Text>
         </TouchableOpacity>
       </View>
-      <Button mode="contained" onPress={onLoginPressed}>
+      <Button  mode="contained"
+    labelStyle={styles.label}
+    contentStyle={styles.button} onPress={onLoginPressed}>
         Login
       </Button>
       <View>

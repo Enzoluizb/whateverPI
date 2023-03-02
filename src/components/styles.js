@@ -27,6 +27,20 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 5,
   },
+  button: {
+    backgroundColor: '#D9B70D',
+    height: 34,
+    width: 222,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+  },
+  label: {
+    fontSize: 14,
+    color: '#2D4B73',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  },
 
   // style recuperar senha
   box: {
