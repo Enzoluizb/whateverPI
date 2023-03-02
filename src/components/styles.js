@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     backgroundColor: "#2D4B73",
+    gap: 15
   },
   Logo: {
     fontFamily: "Red Rose",
@@ -41,6 +42,39 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     textTransform: 'uppercase',
   },
+  TextoEsqueceuSenha: {
+     color: '#D9B70D',
+     fontWeight: 600,
+  },
+  TextoNaoTemUmaConta1: {
+    color: 'white',
+    fontWeight: 600,
+    textAlign: "center",
+  },
+  TextoNaoTemUmaConta2: {
+    color: '#D9B70D',
+    fontWeight: 600,
+    textAlign: "center",
+    border: "2px solid #D9B70D",
+    borderRadius: "12px",
+    padding: 7,
+    marginTop: 10
+  },
+  linha: {
+    width: '334px',
+    height: '0px',
+    left: '42px',
+    border: '1px solid #C1C1C1'
+  },
+  textoPrimario: {
+    color: 'white',
+    fontSize: 15,
+    fontWeight: 500
+  },
+
+
+
+
 
   // style recuperar senha
   box: {
