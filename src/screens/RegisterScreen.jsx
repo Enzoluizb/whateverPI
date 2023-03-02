@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { TouchableOpacity, Text, View } from "react-native";
-import { Button, HelperText, TextInput } from "react-native-paper";
+import { TouchableOpacity, Text, View, TextInput } from "react-native";
+import { Button, HelperText } from "react-native-paper";
 import { auth } from "../components/firebase";
 import { styles } from "../components/styles";
 
@@ -82,8 +82,10 @@ export const RegisterScreen = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Cadastro</Text>
+    <View style={styles.containerLogin}>
+      <Text style={styles.Logo}>whatever</Text>
+      <Text style={styles.textoPrimarioCad}>Cadastro</Text>
+      <Text style={styles.linha} />
       <HelperText type="error">{mostraErro}</HelperText>
       <TextInput
         label="Nome Completo"
@@ -95,6 +97,8 @@ export const RegisterScreen = ({ navigation }) => {
         returnKeyType="next"
         textContentType="givenName"
         keyboardType="default"
+        style={styles.inputLogin}
+        placeholder="Nome completo"
       />
       <HelperText type="error" visible={!!nome.error}>
         {nome.error}
@@ -110,6 +114,8 @@ export const RegisterScreen = ({ navigation }) => {
         autoCompleteType="email"
         textContentType="emailAddress"
         keyboardType="email-address"
+        style={styles.inputLogin}
+        placeholder="Digite seu e-mail"
       />
       <HelperText type="error" visible={!!email.error}>
         {email.error}
@@ -122,6 +128,8 @@ export const RegisterScreen = ({ navigation }) => {
         error={!!password.error}
         errorText={password.error}
         secureTextEntry
+        style={styles.inputLogin}
+        placeholder="Digite sua senha"
       />
       <HelperText type="error" visible={!!password.error}>
         {password.error}
@@ -134,21 +142,30 @@ export const RegisterScreen = ({ navigation }) => {
         error={!!confirmaPassword.error}
         errorText={confirmaPassword.error}
         secureTextEntry
+        style={styles.inputLogin}
+        placeholder="Confirmar senha"
       />
+      <br />
+      <Text style={styles.linha} />
       <HelperText type="error" visible={!!confirmaPassword.error}>
         {confirmaPassword.error}
       </HelperText>
-      <View>
+      <View style={styles.TextosRegistro}>
         <TouchableOpacity
           onPress={() => navigation.navigate("ForgotPasswordScreen")}
         >
-          <Text>Esqueceu sua senha?</Text>
+          <Text style={styles.TextosRegistro}>Esqueceu sua senha?</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-          <Text>Fazer login</Text>
+          <Text style={styles.TextosRegistro}>Já é usuário do whatever?</Text> <Text style={styles.TextosRegistro2}>Faça login</Text>
         </TouchableOpacity>
       </View>
-      <Button mode="contained" onPress={onRegisterPressed}>
+      <Button
+        mode="contained"
+        labelStyle={styles.label}
+        contentStyle={styles.button}
+        onPress={onRegisterPressed}
+      >
         Cadastrar
       </Button>
     </View>

@@ -71,10 +71,29 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 500
   },
-
-
-
-
+  textoPrimarioCad: {
+    color: 'white',
+    fontSize: 25,
+    fontWeight: 500
+  },
+  TextosRegistro: {
+    gap: 30,
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 500,
+    flex:1,
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  TextosRegistro2: {
+    gap: 30,
+    color: '#D9B70D',
+    fontSize: 18,
+    fontWeight: 500,
+    flex:1,
+    flexDirection: "column",
+    alignItems: "center"
+  },
 
   // style recuperar senha
   box: {

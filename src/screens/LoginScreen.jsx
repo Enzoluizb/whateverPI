@@ -136,6 +136,7 @@ export const LoginScreen = ({ route, navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
+      <Text style={styles.linha}/>
     </View>
   );
 };
