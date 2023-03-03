@@ -127,4 +127,70 @@ export const styles = StyleSheet.create({
     height: 50,
     width: 245,
   },
+  //style do perfil
+  perfil: {
+    color:"white",
+    backgroundColor:"#2D4B73",
+    flex:1,
+    alignItems:"center",
+    gap:89,
+  },
+  perfil2:{
+    color:"white",
+    fontFamily:"Red Rose",
+    fontSize:23
+
+  },
+  buttonSalvar: {
+    backgroundColor: '#ECECEC',
+    height: 34,
+    width: 222,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    color:"black",
+  
+  },
+  labelSalvar: {
+    fontSize: 14,
+    color: '#2D4B73',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    
+  },
+  inputSalvar: {
+    height: 34,
+    width: 222,
+    borderRadius: "10px",
+    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.3)",
+    padding: "3px",
+    border: "none",
+    backgroundColor: "#ECECEC",
+    shadowColor: "#171717",
+    shadowOffset: { width: -2, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+  },
+  
+  //foto perfil
+  imgPerfil: {
+    width: 80,
+    height: 80,
+    borderRadius: 90,
+    marginLeft: 65
+  },
+  FotoTexto: {
+    gap: 10,
+    backgroundColor:"#ECECEC",
+    maxHeight: "500px",
+    flex: 0.30,
+    flexDirection: "row",
+    width: "400px",
+    alignItems: "center",
+  },
+  Perfilnome:{
+    fontFamily:"Red Rose",
+    color:"black",
+    fontSize: 22
+  }
 });
