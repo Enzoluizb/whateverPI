@@ -7,5 +7,6 @@ export default function HistoricoScreen() {
     <View style={styles.container}>
       <Text>Histórico</Text>
     </View>
+    
   );
 }
