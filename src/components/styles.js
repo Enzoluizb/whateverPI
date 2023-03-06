@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  // style login
+  // style login e cadastro
   containerLogin: {
     flex: 1,
     justifyContent: "flex-start",
@@ -127,6 +127,7 @@ export const styles = StyleSheet.create({
     height: 50,
     width: 245,
   },
+
   //style do perfil
   perfil: {
     color: "white",
@@ -190,6 +191,8 @@ export const styles = StyleSheet.create({
     color: "black",
     fontSize: 22,
   },
+
+  // style historico
   containerHistorico: {
     backgroundColor: "#2D4B73",
     flex: 1,
@@ -220,6 +223,7 @@ export const styles = StyleSheet.create({
     textTransform: "uppercase",
     fontSize: 20,
     fontFamily: "Red Rose",
+    marginTop: 10
   },
   gap:{
     gap:20
@@ -235,6 +239,5 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 13,
-    
   }
 });

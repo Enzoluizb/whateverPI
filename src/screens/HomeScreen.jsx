@@ -1,5 +1,7 @@
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 import { styles } from "../components/styles";
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 export const HomeScreen = () => {
   return (
@@ -8,3 +10,5 @@ export const HomeScreen = () => {
     </View>
   );
 };
+
+export default firebase;

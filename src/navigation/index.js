@@ -3,14 +3,13 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeScreen } from "../screens/HomeScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { PerfilScreen } from "../screens/PerfilScreen";
-import HistoricoScreen from "../screens/HistoricoScreen";
-import EventosDoDiaScreen from "../screens/EventosDoDiaScreen";
 import { LoginScreen } from "../screens/LoginScreen";
 import { RegisterScreen } from "../screens/RegisterScreen";
 import { ForgotPasswordScreen } from "../screens/ForgotPasswordScreen";
+import HistoricoScreen from "../screens/HistoricoScreen";
+import EventosDoDiaScreen from "../screens/EventosDoDiaScreen";
 
 const Stack = createNativeStackNavigator();
-
 export const RootNavigation = () => {
   return (
     <NavigationContainer>
