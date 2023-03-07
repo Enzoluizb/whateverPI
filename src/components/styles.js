@@ -106,7 +106,6 @@ export const styles = StyleSheet.create({
     gap: 120
   },
   boxG: {
-    margin: "50px 50px",
     backgroundColor: "#D9D9D9",
     width: 373,
     height: 450,
