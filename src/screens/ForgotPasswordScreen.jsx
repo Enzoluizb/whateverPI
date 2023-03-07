@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { TouchableOpacity, Text, View } from "react-native";
-import { Button, HelperText, TextInput } from "react-native-paper";
+import { TouchableOpacity, Text, View, TextInput } from "react-native";
+import { Button, HelperText } from "react-native-paper";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../components/firebase";
 import { styles } from "../components/styles.js";
@@ -42,13 +42,15 @@ export const ForgotPasswordScreen = ({ route, navigation }) => {
   }
 
   return (
-    <View>
-      <View>
-        <Text>Recuperar senha</Text>
-        <Text>Digite seu e-mail</Text>
+    <View style={styles.containerRecu}>
+      <Text style={styles.Logo}>whatever</Text>
+      <View style={styles.boxG}>
+        <Text style={styles.textoG}>Recuperar senha</Text>
+        <Text style={styles.digG}>Digite seu e-mail</Text>
         {mensagem && <HelperText type="info">{mensagem}</HelperText>}
         <HelperText type="error">{mostraErro}</HelperText>
         <TextInput
+          style={styles.inputG}
           label="Digite seu E-mail"
           value={email.value}
           onChangeText={(text) => setEmail({ value: text, error: "" })}
@@ -59,22 +61,15 @@ export const ForgotPasswordScreen = ({ route, navigation }) => {
           autoCompleteType="email"
           textContentType="emailAddress"
           keyboardType="email-address"
+          placeholder="Digite seu e-mail"
         />
         <HelperText visible={!!email.error}>{email.error}</HelperText>
-        <View>
-          <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-            <Text>Fazer login?</Text>
-          </TouchableOpacity>
-        </View>
-        <Button mode="contained" onPress={onForgotPressed}>
-          Login
+        <Button labelStyle={styles.labelG} contentStyle={styles.buttonG}>
+          Enviar
         </Button>
         <View>
-          <Text>Não possui uma conta? </Text>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("RegisterScreen")}
-          >
-            <Text>Cadastrar</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
+            <Text style={styles.TextoNaoTemUmaConta3}>Fazer login</Text>
           </TouchableOpacity>
         </View>
       </View>
