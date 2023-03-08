@@ -54,7 +54,7 @@ export const RegisterScreen = ({ navigation }) => {
       });
     }
     if (!erro) {
-      createUserWithEmailAndPassword(auth, email.value, password.value)
+      createUserWithEmailAndPassword(auth, nome.value ,email.value, password.value)
         .then((value) => {
           console.log("Cadastrado com sucesso! " + value.user.uid);
           navigation.navigate("LoginScreen", {

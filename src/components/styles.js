@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 export const styles = StyleSheet.create({
   // style login e cadastro
@@ -102,7 +103,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#2D4B73",
-    fontFamily: "red rose",
+    fontFamily: "Red Rose",
     gap: 120
   },
   boxG: {
@@ -275,5 +276,7 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 13,
-  }
+  },
+
+  // style home
 });
