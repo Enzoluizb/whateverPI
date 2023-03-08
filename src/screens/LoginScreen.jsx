@@ -51,8 +51,10 @@ export const LoginScreen = ({ route, navigation }) => {
     }
     signInWithEmailAndPassword(auth, email.value, password.value)
       .then((userCredential) => {
+        console.log(userCredential)
         const user = userCredential.user;
         navigation.navigate("Drawer");
+        storeData("user", user);
       })
       .catch((error) => {
         lidarComErro(error.code);

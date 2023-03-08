@@ -14,8 +14,8 @@ export const HomeScreen = () => {
   });
 
   return (
-    <View style={styles.containerHome}>
-      <Text>Bem-vindo {user.displayName}</Text>
+    <View>
+      <Text>Bem-vindo {user.displayName} {/* {user.email} */}</Text>
       {/* <Text>Bem-vindo </Text> */}
     </View>
   );

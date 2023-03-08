@@ -10,7 +10,7 @@ export function SplashScreen({ navigation }) {
       console.log(data);
       //   if (data.hasOwnProperty("displayName")) {
       if (typeof data === "object") {
-        console.log("USuário logado");
+        console.log("Usuário logado");
         setTimeout(navigation.navigate("Drawer"), 2000);
       } else {
         console.log("usuário não Logado");
