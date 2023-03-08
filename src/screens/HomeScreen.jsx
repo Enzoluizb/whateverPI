@@ -14,7 +14,7 @@ export const HomeScreen = () => {
   });
 
   return (
-    <View>
+    <View style={styles.linhaH}>
       <Text>Bem-vindo {user.displayName} {/* {user.email} */}</Text>
       {/* <Text>Bem-vindo </Text> */}
     </View>
