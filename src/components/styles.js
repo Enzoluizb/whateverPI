@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  // style login
+  // style login e cadastro
   containerLogin: {
     flex: 1,
     justifyContent: "flex-start",
@@ -96,37 +96,74 @@ export const styles = StyleSheet.create({
   },
 
   // style recuperar senha
-  box: {
-    marginTop: 150,
+  containerRecu: {
+    flex: 1,
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#2D4B73",
+    fontFamily: "red rose",
+    gap: 120
+  },
+  boxG: {
     backgroundColor: "#D9D9D9",
     width: 373,
     height: 450,
     borderRadius: 15,
+    flex: 0.5,
+    alignItems: "center"
   },
-  texto: {
+  textoG: {
+    fontFamily: "red rose",
     textAlign: "center",
     marginTop: 30,
     fontSize: 27,
     fontWeight: "bold",
   },
-  dig: {
+  digG: {
+    fontFamily: "red rose",
     marginTop: 60,
     margin: 30,
     fontSize: 27,
   },
-  input: {
+  inputG: {
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    overflow:"hidden",
     height: 44,
     width: 341,
     margin: 12,
-    borderRadius: 15,
-    padding: 10,
-    backgroundColor: "white",
+    backgroundColor: "#ECECEC",
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+    textDecorationLine: "none"
   },
-  botao: {
+  buttonG: {
     backgroundColor: "#F2F2F2",
-    height: 50,
-    width: 245,
+    height: 34,
+    width: 222,
+    justifyContent: "center",
+    alignItems: "center",
   },
+  labelG: {
+    fontSize: 14,
+    color: "#000000",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+  },
+  TextoNaoTemUmaConta3: {
+    color: "#000000",
+    fontWeight: 600,
+    textAlign: "center",
+    border: "2px solid #000000",
+    borderRadius: "12px",
+    padding: 7,
+    marginTop: 10,
+  },
+
   //style do perfil
   perfil: {
     color: "white",
@@ -190,6 +227,8 @@ export const styles = StyleSheet.create({
     color: "black",
     fontSize: 22,
   },
+
+  // style historico
   containerHistorico: {
     backgroundColor: "#2D4B73",
     flex: 1,
@@ -220,6 +259,7 @@ export const styles = StyleSheet.create({
     textTransform: "uppercase",
     fontSize: 20,
     fontFamily: "Red Rose",
+    marginTop: 10
   },
   gap:{
     gap:20
@@ -235,6 +275,5 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 13,
-    
   }
 });

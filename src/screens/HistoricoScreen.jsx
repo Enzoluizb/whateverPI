@@ -73,34 +73,6 @@ export default function HistoricoScreen() {
             />
         </View>
         <Text style={styles.linhaH} />
-        <View style={styles.gap}>
-          <View style={styles.historico}>
-          <View style={styles.historicoTest}>
-            <Text style={styles.textoH}>Restaurante encontrados!</Text>
-            <Text style={styles.textoH}>Dia 20/01/2023</Text>
-            </View>
-            <CheckBox
-              title=""
-              checked={isChecked}
-              onPress={() => setIsChecked(!isChecked)}
-            />
-          </View>
-        </View>
-        <Text style={styles.linhaH} />
-        <View style={styles.gap}>
-          <View style={styles.historico}>
-          <View style={styles.historicoTest}>
-            <Text style={styles.textoH}>Restaurante encontrados!</Text>
-            <Text style={styles.textoH}>Dia 20/01/2023</Text>
-            </View>
-            <CheckBox
-              title=""
-              checked={isChecked}
-              onPress={() => setIsChecked(!isChecked)}
-            />
-          </View>
-        </View>
-        <Text style={styles.linhaH} />
       </View>
     </View>
   );

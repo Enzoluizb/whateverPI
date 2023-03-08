@@ -7,6 +7,7 @@ import { styles } from "../components/styles";
 // Importe o módulo de autenticação do Firebase
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import "../components/styles.css";
+import { storeData } from "../utils/GetSetData";
 
 export const LoginScreen = ({ route, navigation }) => {
   // Crie uma instância do provedor de autenticação do Google
@@ -19,7 +20,7 @@ export const LoginScreen = ({ route, navigation }) => {
       .then((result) => {
         // O usuário fez login com o Google com sucesso
         const user = result.user;
-        console.log(user);
+        storeData("user", user);
         navigation.navigate("Drawer");
       })
       .catch((error) => {
@@ -77,15 +78,17 @@ export const LoginScreen = ({ route, navigation }) => {
   return (
     <View style={styles.containerLogin}>
       <Text style={styles.Logo}>whatever</Text>
-      <Text style={styles.linha}/>
-      <Text style={styles.textoPrimario}>Para continuar, faça login no whatever</Text>
+      <Text style={styles.linha} />
+      <Text style={styles.textoPrimario}>
+        Para continuar, faça login no whatever
+      </Text>
       {mensagem && <HelperText type="info">{mensagem}</HelperText>}
       <HelperText type="error">{mostraErro}</HelperText>
       <button className="google-button" onClick={() => signInWithGoogle()}>
         Entrar com o Google
       </button>
-      <Text/>
-      <Text style={styles.linha}/>
+      <Text />
+      <Text style={styles.linha} />
       <TextInput
         label="e-mail"
         value={email.value}
@@ -127,7 +130,7 @@ export const LoginScreen = ({ route, navigation }) => {
           <Text style={styles.TextoEsqueceuSenha}>Esqueceu sua senha?</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.linha}/>
+      <Text style={styles.linha} />
       <View>
         <Text style={styles.TextoNaoTemUmaConta1}>Não tem uma conta? </Text>
         <TouchableOpacity onPress={() => navigation.navigate("RegisterScreen")}>
@@ -136,7 +139,7 @@ export const LoginScreen = ({ route, navigation }) => {
           </Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.linha}/>
+      <Text style={styles.linha} />
     </View>
   );
 };
