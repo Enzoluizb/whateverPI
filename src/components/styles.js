@@ -278,4 +278,32 @@ export const styles = StyleSheet.create({
   },
 
   // style home
+  containerHome: {
+    flex: 1,
+    backgroundColor: "#2D4B73",
+  },
+  msgWelcome: {
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize: 20,
+    fontFamily: "Red Rose",
+    marginTop: 10
+  },
+
+  // style eventos do dia
+  containerEventos: {
+    flex: 1,
+    backgroundColor: "#2D4B73",
+  },
+  tituloEventos: {
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize: 20,
+    fontFamily: "Red Rose",
+    marginTop: 10
+  }
 });

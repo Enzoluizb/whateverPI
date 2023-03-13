@@ -4,8 +4,8 @@ import { styles } from "../components/styles";
 
 export default function EventosDoDiaScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Eventos do Dia</Text>
+    <View style={styles.containerEventos}>
+      <Text style={styles.tituloEventos}>Eventos do Dia</Text>
     </View>
   );
 }

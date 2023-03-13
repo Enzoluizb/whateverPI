@@ -11,7 +11,7 @@ export const PerfilScreen = ({ navigation }) => {
                 style={styles.imgPerfil}>
                     
                 </Image>
-                <Text style={styles.Perfilnome}>Enzo Luiz Bertoli</Text>
+                <Text style={styles.Perfilnome}>User</Text>
             </View>
             <View>
                 <Text style={styles.perfil2}>Alterar e-mail</Text>
