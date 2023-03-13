@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { white } from "react-native-paper/lib/typescript/styles/themes/v2/colors";
 
 export const styles = StyleSheet.create({
   // style login e cadastro
